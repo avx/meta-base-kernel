@@ -1,6 +1,7 @@
-obj-m := arm-pmu.o
+obj-m := pmu-uaccess-mod.o
 
 SRC := $(shell pwd)
+KERNEL_SRC ?= /usr/src/linux-headers-`uname -r`
 
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)

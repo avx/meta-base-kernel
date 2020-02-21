@@ -1,4 +1,4 @@
-#define _GNU_SOURCE
+#define _GNU_SOURCE /* for sched affinity */
 #include <stdio.h>
 #include <sched.h>
 #include <stdlib.h>

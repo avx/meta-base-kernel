@@ -4,7 +4,7 @@
 
 static void _pmu_user_access(void *arg)
 {
-    int en = !!(int)arg;
+    long en = (long)arg;
 
     printk("[CPU#%d] %sable user-mode access to the performance counter\n", \
             smp_processor_id(), en ? "En" : "Dis");
