@@ -84,13 +84,13 @@ static ssize_t store_time_dilation_factor(struct device *dev,
 static DEVICE_ATTR(time_dilation_factor, S_IRUGO | S_IWUSR, show_time_dilation_factor, store_time_dilation_factor);
 
 struct device_attribute *vrtc_attrs[] = {
-    &dev_attr_time_dilation_factor,
-    NULL
+	&dev_attr_time_dilation_factor,
+	NULL
 };
 
 static struct attribute_group vrtc_attribute_group = {
-    .name = NULL,		/* put in device directory */
-    .attrs = (struct attribute **)vrtc_attrs,
+	.name = NULL,	/* put in device directory */
+	.attrs = (struct attribute **)vrtc_attrs,
 };
 
 static int vrtc_probe(struct platform_device *pdev)
