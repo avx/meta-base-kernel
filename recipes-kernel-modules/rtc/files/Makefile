@@ -1,7 +1,7 @@
 obj-m := rtc.o
 
 SRC := $(shell pwd)
-KERNEL_SRC := "/usr/src/linux"
+KERNEL_SRC ?= /usr/src/linux-headers-`uname -r`
 
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
