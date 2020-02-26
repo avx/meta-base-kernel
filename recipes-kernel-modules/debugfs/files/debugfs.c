@@ -115,7 +115,7 @@ static int __init debugfs_init(void)
 	if (!pdentry_string)
 		goto fail;
 
-//	pdentry_file = debugfs_create_file("file", 0644, debugfs_dir, NULL, &file_fops); // file will seen as 0
+//	pdentry_file = debugfs_create_file("file", 0644, debugfs_dir, NULL, &file_fops); // file size will seen as 0
 	pdentry_file = debugfs_create_file_size("file", S_IRUGO | S_IWUSR, debugfs_dir, NULL, &file_fops, FILE_SIZE);
 	if (!pdentry_file)
 		goto fail;
